@@ -142,12 +142,10 @@ input:focus {
 }
 .show-cvc-bc {
   position: absolute;
-  top: 39%;
+  top: 43%;
   right: 11%;
 }
-.attribution {
-  margin-top: -23px;
-}
+/*------------------------MEDIA QUERY------------------*/
 @media (max-width: 900px) {
   .bg-d {
     display: none;
