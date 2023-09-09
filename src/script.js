@@ -1,3 +1,4 @@
+/*--------- SELECTING DOM ELEMENTS--------*/
 let del = document.querySelector(".form");
 let show = document.querySelector(".complete");
 function e() {
@@ -8,6 +9,8 @@ function e() {
   let m = document.querySelector(".m").value;
   let y = document.querySelector(".y").value;
   let cvc = document.querySelector(".cvc").value;
+
+  /*----------- IF/ELSE STATEMENT FOR NAME, MONTH,YEAR, CVV ON THE CARD -----*/
   if (
     number.length == 16 &&
     /^[a-zA-Z ]+$/.test(name) &&
@@ -75,6 +78,7 @@ function e() {
     }
   }
 }
+/*-------- EVENT  HANDLER-----*/
 function isInputNumber(evt) {
     var ch = String.fromCharCode(evt.which);
     if (!/[0-9]/.test(ch)) {
