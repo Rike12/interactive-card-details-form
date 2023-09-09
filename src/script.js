@@ -75,3 +75,52 @@ function e() {
     }
   }
 }
+function isInputNumber(evt) {
+    var ch = String.fromCharCode(evt.which);
+    if (!/[0-9]/.test(ch)) {
+      evt.preventDefault();
+    }
+  }
+  function v() {
+    del.style.display = "block";
+    show.style.display = "none";
+    document.querySelector(".name").value = "";
+    document.querySelector(".number").value = "";
+    document.querySelector(".m").value = "";
+    document.querySelector(".y").value = "";
+    document.querySelector(".cvc").value = "";
+    document.querySelector(".show-name-fc").innerHTML = "Jane Appleseed";
+    document.querySelector(".show-number-fc").innerHTML = "0000 0000 0000 0000";
+    document.querySelector(".show-m-fc").innerHTML = "00";
+    document.querySelector(".show-y-fc").innerHTML = "00";
+    document.querySelector(".show-cvc-bc").innerHTML = "123";
+  }
+  function show_num() {
+    let num = document.querySelector(".number").value;
+    let joy = num.match(/.{1,4}/g);
+    document.querySelector(".show-number-fc").innerHTML = joy.join(" ");
+  }
+  function show_n() {
+    let n = document.querySelector(".name").value;
+    document.querySelector(".show-name-fc").innerHTML = n;
+  }
+  function show_m() {
+    let m = document.querySelector(".m").value;
+    document.querySelector(".show-m-fc").innerHTML = m;
+  }
+  function show_y() {
+    let y = document.querySelector(".y").value;
+    document.querySelector(".show-y-fc").innerHTML = y;
+  }
+  function show_cvc() {
+    let cvc = document.querySelector(".cvc").value;
+    document.querySelector(".show-cvc-bc").innerHTML = cvc;
+  }
+  function fc_show() {
+    document.querySelector(".abs-fc").style.zIndex = "1";
+    document.querySelector(".abs-bc").style.zIndex = "0";
+  }
+  function bc_show() {
+    document.querySelector(".abs-bc").style.zIndex = "1";
+    document.querySelector(".abs-fc").style.zIndex = "0";
+  }
